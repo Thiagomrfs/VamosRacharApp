@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">VamosRachar</string>
+    <string name="vamos_rachar">Vamos Rachar!</string>
+    <string name="qtd_pessoas">Quantidade de pessoas</string>
+    <string name="simbolo_real">simbolo do real</string>
+    <string name="valor_conta">Valor da conta</string>
+    <string name="img_grupo">imagem de um grupo de pessoas</string>
+    <string name="valor_final">R$ 0,00</string>
+    <string name="speakerImg_description">Imagem de um speaker</string>
+    <string name="real_simbolo_description">imagem do símbolo do real</string>
 </resources>
