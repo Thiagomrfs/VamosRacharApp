@@ -15,7 +15,6 @@
             android:id="@+id/textView2"
             android:layout_width="248dp"
             android:layout_height="119dp"
-            android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/vamos_rachar"
             android:textAlignment="center"
@@ -61,14 +60,14 @@
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:autofillHints="valor da conta"
+                    android:backgroundTint="@color/white"
                     android:ems="10"
                     android:hint="@string/valor_conta"
                     android:inputType="number"
                     android:labelFor="@id/imageView2"
-                    android:text="@string/valor_conta"
                     android:textColor="@color/white"
                     tools:ignore="DuplicateSpeakableTextCheck"
-                    android:backgroundTint="@color/white" />
+                    android:textColorHint="@color/gray" />
 
             </LinearLayout>
 
@@ -94,14 +93,14 @@
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:autofillHints="quantidade de pessoas"
+                    android:backgroundTint="@color/white"
                     android:ems="10"
                     android:hint="@string/qtd_pessoas"
                     android:inputType="number"
                     android:labelFor="@id/imageView3"
-                    android:text="@string/qtd_pessoas"
                     android:textColor="@color/white"
                     tools:ignore="DuplicateSpeakableTextCheck"
-                    android:backgroundTint="@color/white" />
+                    android:textColorHint="@color/gray" />
             </LinearLayout>
 
         </LinearLayout>
@@ -124,9 +123,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="281dp"
-            android:layout_height="wrap_content"
+            android:layout_width="305dp"
+            android:layout_height="75dp"
             android:layout_marginTop="25dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -150,18 +151,18 @@
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton3"
-                android:layout_width="wrap_content"
+                android:layout_width="67dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:focusable="true"
                 android:contentDescription="@string/speakerImg_description"
+                android:focusable="true"
                 app:backgroundTint="@color/secondary_purple"
-                app:tint="@color/white"
                 app:fabSize="normal"
                 app:maxImageSize="48dp"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                android:layout_marginStart="50dp" />
+                app:tint="@color/white" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
