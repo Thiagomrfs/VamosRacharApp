@@ -84,7 +84,8 @@
                     android:layout_height="96dp"
                     android:alpha="1"
                     android:contentDescription="@string/img_grupo"
-                    app:srcCompat="@drawable/grupo_pessoas" />
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/group_svgrepo_com" />
 
                 <EditText
                     android:id="@+id/editNumberQtdPessoas"
