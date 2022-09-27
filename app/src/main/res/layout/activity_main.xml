@@ -145,8 +145,8 @@
                 android:contentDescription="@string/real_simbolo_description"
                 android:focusable="true"
                 app:backgroundTint="@color/secondary_purple"
-                app:maxImageSize="48dp"
-                app:srcCompat="@drawable/real_simbolo"
+                app:maxImageSize="40dp"
+                app:srcCompat="?attr/actionModeShareDrawable"
                 app:tint="@color/white"
                 tools:ignore="ImageContrastCheck" />
 
