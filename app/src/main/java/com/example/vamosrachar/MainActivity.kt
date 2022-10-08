@@ -7,10 +7,12 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.w3c.dom.Text
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
+import android.content.Intent
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,5 +55,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         )
+
+        val btnCompartilhar = findViewById<FloatingActionButton>(R.id.btnShare)
+        val btnTTS = findViewById<FloatingActionButton>(R.id.btnTTS)
+
+        btnCompartilhar!!.setOnClickListener {
+            val intent = Intent()
+
+            intent.setAction(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Segundo meus cálculos, deu " + valorFinal.text.toString() + " para cada."
+            )
+
+            startActivity(intent)
+        }
     }
 }
