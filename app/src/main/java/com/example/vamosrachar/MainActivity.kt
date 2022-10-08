@@ -1,6 +1,8 @@
 package com.example.vamosrachar
 
+import android.content.Intent
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -8,17 +10,19 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import org.w3c.dom.Text
-import java.text.DecimalFormat
-import java.text.NumberFormat
 import java.util.*
-import android.content.Intent
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+
+    var tts: TextToSpeech? = null
+    var btnTTS: FloatingActionButton? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tts = TextToSpeech(this, this)
 
         val edValorConta = findViewById<EditText>(R.id.editValorConta)
         val edQtdPessoas = findViewById<EditText>(R.id.editQtdPessoas)
@@ -57,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val btnCompartilhar = findViewById<FloatingActionButton>(R.id.btnShare)
-        val btnTTS = findViewById<FloatingActionButton>(R.id.btnTTS)
+        btnTTS = findViewById(R.id.btnTTS)
 
         btnCompartilhar!!.setOnClickListener {
             val intent = Intent()
@@ -72,5 +76,42 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
+        btnTTS!!.setOnClickListener {
+            chamarTTS(valorFinal.text.toString())
+        }
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            val result = tts!!.setLanguage(Locale("pt", "BR"))
+
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS","A língua especificada não é suportada!")
+            } else {
+                btnTTS!!.isEnabled = true
+            }
+
+        } else {
+            Log.e("TTS", "Inicialização falhou!")
+        }
+    }
+
+    fun chamarTTS(value: String){
+        var message = "Separando a conta, ficou " + value + " para cada."
+        tts!!.speak(
+            message,
+            TextToSpeech.QUEUE_FLUSH,
+            null,
+            ""
+        )
+    }
+
+    public override fun onDestroy() {
+        if (tts != null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+        super.onDestroy()
     }
 }
