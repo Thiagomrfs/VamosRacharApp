@@ -12,7 +12,7 @@
         android:background="@color/primary_purple">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/appTitle"
             android:layout_width="248dp"
             android:layout_height="119dp"
             android:fontFamily="sans-serif-black"
@@ -34,11 +34,11 @@
             android:layout_height="221dp"
             android:layout_marginTop="50dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/valorFinal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/appTitle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,14 +47,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/realSimbolo"
                     android:layout_width="109dp"
                     android:layout_height="96dp"
                     android:contentDescription="@string/simbolo_real"
                     app:srcCompat="@drawable/real_simbolo" />
 
                 <EditText
-                    android:id="@+id/editNumberValorConta"
+                    android:id="@+id/editValorConta"
                     android:layout_width="0dp"
                     android:layout_height="86dp"
                     android:layout_marginStart="20dp"
@@ -63,11 +63,11 @@
                     android:backgroundTint="@color/white"
                     android:ems="10"
                     android:hint="@string/valor_conta"
-                    android:inputType="number"
-                    android:labelFor="@id/imageView2"
+                    android:inputType="numberDecimal"
+                    android:labelFor="@id/realSimbolo"
                     android:textColor="@color/white"
-                    tools:ignore="DuplicateSpeakableTextCheck"
-                    android:textColorHint="@color/gray" />
+                    android:textColorHint="@color/gray"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
             </LinearLayout>
 
@@ -79,7 +79,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/grupoSimbolo"
                     android:layout_width="109dp"
                     android:layout_height="96dp"
                     android:alpha="1"
@@ -88,7 +88,7 @@
                     app:srcCompat="@drawable/group_svgrepo_com" />
 
                 <EditText
-                    android:id="@+id/editNumberQtdPessoas"
+                    android:id="@+id/editQtdPessoas"
                     android:layout_width="0dp"
                     android:layout_height="96dp"
                     android:layout_marginStart="20dp"
@@ -98,16 +98,17 @@
                     android:ems="10"
                     android:hint="@string/qtd_pessoas"
                     android:inputType="number"
-                    android:labelFor="@id/imageView3"
+                    android:labelFor="@id/grupoSimbolo"
+                    android:text="2"
                     android:textColor="@color/white"
-                    tools:ignore="DuplicateSpeakableTextCheck"
-                    android:textColorHint="@color/gray" />
+                    android:textColorHint="@color/gray"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
             </LinearLayout>
 
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/valorFinal"
             android:layout_width="207dp"
             android:layout_height="80dp"
             android:layout_marginTop="50dp"
@@ -134,10 +135,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4">
+            app:layout_constraintTop_toBottomOf="@+id/valorFinal">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton2"
+                android:id="@+id/btnShare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,7 +152,7 @@
                 tools:ignore="ImageContrastCheck" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton3"
+                android:id="@+id/btnTTS"
                 android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
