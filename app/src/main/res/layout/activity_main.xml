@@ -13,8 +13,8 @@
 
         <TextView
             android:id="@+id/appTitle"
-            android:layout_width="248dp"
-            android:layout_height="119dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:text="@string/vamos_rachar"
             android:textAlignment="center"
@@ -30,8 +30,8 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="365dp"
-            android:layout_height="221dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/valorFinal"
@@ -56,7 +56,7 @@
                 <EditText
                     android:id="@+id/editValorConta"
                     android:layout_width="0dp"
-                    android:layout_height="86dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:autofillHints="valor da conta"
@@ -84,13 +84,13 @@
                     android:layout_height="96dp"
                     android:alpha="1"
                     android:contentDescription="@string/img_grupo"
-                    app:tint="@color/white"
-                    app:srcCompat="@drawable/group_svgrepo_com" />
+                    app:srcCompat="@drawable/group_svgrepo_com"
+                    app:tint="@color/white" />
 
                 <EditText
                     android:id="@+id/editQtdPessoas"
                     android:layout_width="0dp"
-                    android:layout_height="96dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:autofillHints="quantidade de pessoas"
@@ -109,8 +109,8 @@
 
         <TextView
             android:id="@+id/valorFinal"
-            android:layout_width="207dp"
-            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="@string/valor_final"
             android:textAlignment="center"
