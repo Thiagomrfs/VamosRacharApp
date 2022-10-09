@@ -145,8 +145,10 @@
                 android:clickable="true"
                 android:contentDescription="@string/real_simbolo_description"
                 android:focusable="true"
+                android:foregroundTint="@color/white"
                 app:backgroundTint="@color/secondary_purple"
-                app:maxImageSize="40dp"
+                app:fabSize="normal"
+                app:maxImageSize="48dp"
                 app:srcCompat="?attr/actionModeShareDrawable"
                 app:tint="@color/white"
                 tools:ignore="ImageContrastCheck" />
