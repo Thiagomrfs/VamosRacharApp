@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Let\'s split</string>
+    <string name="vamos_rachar">Let\'s split!</string>
+    <string name="qtd_pessoas">Group size</string>
+    <string name="simbolo_real">Real symbol</string>
+    <string name="valor_conta">Bill\'s cost</string>
+    <string name="img_grupo">Image of a group of people</string>
+    <string name="valor_final">R$ 0,00</string>
+    <string name="speakerImg_description">Image of a speaker</string>
+    <string name="real_simbolo_description">image of brazilian real symbol</string>
+</resources>

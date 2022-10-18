@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_purple">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginBottom="50dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/real_simbolo_description"
+                android:focusable="true"
+                android:foregroundTint="@color/white"
+                app:backgroundTint="@color/secondary_purple"
+                app:fabSize="normal"
+                app:maxImageSize="48dp"
+                app:srcCompat="?attr/actionModeShareDrawable"
+                app:tint="@color/white"
+                tools:ignore="ImageContrastCheck" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnTTS"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/speakerImg_description"
+                android:focusable="true"
+                app:backgroundTint="@color/secondary_purple"
+                app:fabSize="normal"
+                app:maxImageSize="48dp"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/valorFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valor_final"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginBottom="280dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/vamos_rachar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle"
+            app:layout_constraintVertical_bias="0.31">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/realSimbolo"
+                    android:layout_width="109dp"
+                    android:layout_height="96dp"
+                    android:contentDescription="@string/simbolo_real"
+                    app:srcCompat="@drawable/real_simbolo" />
+
+                <EditText
+                    android:id="@+id/editValorConta"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:autofillHints="valor da conta"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/valor_conta"
+                    android:inputType="numberDecimal"
+                    android:labelFor="@id/realSimbolo"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/grupoSimbolo"
+                    android:layout_width="109dp"
+                    android:layout_height="96dp"
+                    android:alpha="1"
+                    android:contentDescription="@string/img_grupo"
+                    app:srcCompat="@drawable/group_svgrepo_com"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editQtdPessoas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:autofillHints="quantidade de pessoas"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/qtd_pessoas"
+                    android:inputType="number"
+                    android:labelFor="@id/grupoSimbolo"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
